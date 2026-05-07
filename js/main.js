@@ -37,7 +37,7 @@
      1. COUNTDOWN TIMER
      ------------------------------------------------------------------- */
 
-  const DATA_FIM = new Date('2026-06-30T23:59:59');
+  const DATA_FIM = new Date(Date.now() + 8 * 60 * 60 * 1000);
 
   function formatarNumero(n) {
     return String(n).padStart(2, '0');

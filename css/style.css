@@ -263,6 +263,17 @@ strong {
   object-fit: contain;
 }
 
+.card-ilustracao {
+  width: 160px;
+  height: 160px;
+  display: block;
+  margin: 0 auto 12px;
+}
+
+.card-ilustracao svg {
+  display: block;
+}
+
 .manual-mockup {
   width: 100%;
   max-width: 160px;
