@@ -253,6 +253,44 @@ strong {
   flex-shrink: 0;
 }
 
+/* ===================== LOGO E MANUAL MOCKUP ===================== */
+.logo-qcg {
+  width: 120px;
+  margin-bottom: 16px;
+  display: block;
+}
+
+.manual-mockup {
+  width: 100%;
+  max-width: 200px;
+  display: block;
+  margin: 0 auto 16px;
+}
+
+/* ===================== IMAGENS REAIS ===================== */
+.hero-foto {
+  width: 100%;
+  max-width: 480px;
+  height: auto;
+  border-radius: var(--raio-grande);
+  display: block;
+}
+
+.sobre-foto {
+  width: 340px;
+  height: auto;
+  border-radius: var(--raio-grande);
+  display: block;
+}
+
+.receita-foto {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-radius: var(--raio);
+  display: block;
+}
+
 /* ===================== URGÊNCIA (STICKY) ===================== */
 #urgencia {
   position: sticky;
