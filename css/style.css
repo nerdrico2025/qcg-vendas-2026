@@ -722,6 +722,16 @@ strong {
 .depoimento-texto::before { content: "\201C"; }
 .depoimento-texto::after  { content: "\201D"; }
 
+.depoimento-foto {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top center;
+  background: transparent;
+  display: block;
+}
+
 .depoimento-nome {
   font-family: var(--fonte-titulo);
   font-size: 15px;
@@ -729,6 +739,13 @@ strong {
   color: var(--cinza-escuro);
   text-align: center;
   display: block;
+}
+
+.depoimento-arroba {
+  font-size: 13px;
+  color: #999;
+  display: block;
+  margin-top: 2px;
 }
 
 /* ===================== OFERTA / PREÇO ===================== */
