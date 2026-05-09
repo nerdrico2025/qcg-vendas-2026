@@ -722,6 +722,15 @@ strong {
 .depoimento-texto::before { content: "\201C"; }
 .depoimento-texto::after  { content: "\201D"; }
 
+.card-guia-img {
+  width: 100%;
+  max-width: 160px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto 16px;
+}
+
 .depoimento-foto {
   width: 80px;
   height: 80px;
