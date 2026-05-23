@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Quinzena da Conscientização GlutenFree — 2ª Edição 2026 | Evento Gratuito</title>
+  <meta name="description" content="15 dias de conteúdo gratuito com a Drª Luciene Marques — Chef GlutenFree. Barriga inchada, eixo intestino-cérebro, leitura de rótulos e muito mais." />
+  <meta name="author" content="Chef GlutenFree — Drª Luciene Marques" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Quinzena da Conscientização GlutenFree — 2ª Edição 2026" />
+  <meta property="og:description" content="15 dias de conteúdo gratuito com a Drª Luciene Marques. Evento Online e Gratuito." />
+  <meta property="og:locale" content="pt_BR" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ===================== TOKENS ===================== */
+    :root {
+      --laranja:        #E35A1F;
+      --laranja-escuro: #C44A12;
+      --laranja-claro:  #FFF3EE;
+      --teal:           #2D6E6E;
+      --teal-claro:     #E8F4F4;
+      --bege:           #FDF9F6;
+      --cinza-escuro:   #1A1A1A;
+      --cinza-medio:    #555555;
+      --branco:         #FFFFFF;
+
+      --fonte-titulo: 'Nunito', sans-serif;
+      --fonte-corpo:  'Open Sans', sans-serif;
+
+      --sombra-suave: 0 4px 20px rgba(0,0,0,0.08);
+      --sombra-card:  0 8px 32px rgba(0,0,0,0.10);
+
+      --raio: 12px;
+      --transicao: 0.25s ease;
+    }
+
+    /* ===================== RESET ===================== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    body {
+      font-family: var(--fonte-corpo);
+      font-size: 17px;
+      line-height: 1.7;
+      color: var(--cinza-escuro);
+      background-color: var(--bege);
+      -webkit-font-smoothing: antialiased;
+    }
+    img { display: block; max-width: 100%; height: auto; }
+    a { color: inherit; text-decoration: none; }
+    ul { list-style: none; }
+    h1, h2, h3, h4 { font-family: var(--fonte-titulo); line-height: 1.2; color: var(--cinza-escuro); }
+    p { color: var(--cinza-medio); }
+    strong { color: var(--cinza-escuro); font-weight: 600; }
+
+    /* ===================== CONTAINER ===================== */
+    .container {
+      width: 100%;
+      max-width: 1100px;
+      margin-inline: auto;
+      padding-inline: 48px;
+    }
+
+    /* ===================== HEADER ===================== */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--branco);
+      box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    }
+    .header-inner {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding-block: 14px;
+    }
+    .header-logo {
+      height: 44px;
+      width: auto;
+    }
+    .header-nome {
+      font-family: var(--fonte-titulo);
+      font-weight: 800;
+      font-size: 1.05rem;
+      color: var(--teal);
+      line-height: 1.25;
+    }
+    .header-nome span {
+      display: block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--laranja);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    /* ===================== HERO ===================== */
+    .hero {
+      background: linear-gradient(160deg, var(--teal) 0%, #1e4e4e 100%);
+      padding-block: 72px 64px;
+      text-align: center;
+    }
+    .badge-evento {
+      display: inline-block;
+      background: rgba(255,255,255,0.15);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.3);
+      border-radius: 50px;
+      font-family: var(--fonte-titulo);
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      padding: 6px 20px;
+      margin-bottom: 24px;
+      text-transform: uppercase;
+    }
+    .hero-titulo {
+      font-family: var(--fonte-titulo);
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 18px;
+    }
+    .hero-titulo em {
+      font-style: normal;
+      color: #FFD4B8;
+    }
+    .hero-subtitulo {
+      font-size: clamp(1rem, 2.5vw, 1.2rem);
+      color: rgba(255,255,255,0.85);
+      max-width: 620px;
+      margin-inline: auto;
+      margin-bottom: 0;
+    }
+
+    /* ===================== PLAYER SECTION ===================== */
+    .secao-player {
+      padding-block: 72px;
+      background: var(--bege);
+    }
+    .player-grid {
+      display: grid;
+      grid-template-columns: 65fr 35fr;
+      gap: 48px;
+      align-items: start;
+    }
+    .player-wrapper {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border-radius: var(--raio);
+      overflow: hidden;
+      box-shadow: var(--sombra-card);
+    }
+    .player-wrapper iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+    .player-info h2 {
+      font-size: 1.55rem;
+      font-weight: 800;
+      color: var(--teal);
+      margin-bottom: 16px;
+      line-height: 1.3;
+    }
+    .player-info p {
+      font-size: 0.97rem;
+      color: var(--cinza-medio);
+      margin-bottom: 20px;
+    }
+    .temas-lista {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .tema-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 0.92rem;
+      color: var(--cinza-medio);
+    }
+    .tema-icone {
+      flex-shrink: 0;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: var(--teal-claro);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.7rem;
+      margin-top: 2px;
+    }
+
+    /* ===================== CTA CARD ===================== */
+    .secao-cta {
+      padding-block: 72px;
+      background: #FFF3EE;
+    }
+    .cta-card {
+      background: var(--branco);
+      border-radius: var(--raio);
+      box-shadow: var(--sombra-card);
+      padding: 56px 48px;
+      text-align: center;
+      max-width: 680px;
+      margin-inline: auto;
+      border-top: 4px solid var(--laranja);
+    }
+    .cta-tag {
+      display: inline-block;
+      background: var(--laranja-claro);
+      color: var(--laranja);
+      border-radius: 50px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      padding: 5px 16px;
+      margin-bottom: 20px;
+    }
+    .cta-titulo {
+      font-size: clamp(1.5rem, 4vw, 2rem);
+      font-weight: 800;
+      color: var(--cinza-escuro);
+      margin-bottom: 16px;
+      line-height: 1.25;
+    }
+    .cta-desc {
+      font-size: 1rem;
+      color: var(--cinza-medio);
+      max-width: 500px;
+      margin-inline: auto;
+      margin-bottom: 36px;
+    }
+    .btn-cta {
+      display: inline-block;
+      background: var(--laranja);
+      color: #fff;
+      font-family: var(--fonte-titulo);
+      font-weight: 800;
+      font-size: 1.05rem;
+      letter-spacing: 0.02em;
+      padding: 18px 40px;
+      border-radius: 50px;
+      box-shadow: 0 6px 24px rgba(227,90,31,0.35);
+      transition: background var(--transicao), transform var(--transicao), box-shadow var(--transicao);
+    }
+    .btn-cta:hover {
+      background: var(--laranja-escuro);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 32px rgba(227,90,31,0.4);
+    }
+    .cta-garantia {
+      margin-top: 16px;
+      font-size: 0.83rem;
+      color: #888;
+    }
+
+    /* ===================== FOOTER ===================== */
+    .site-footer {
+      background: var(--cinza-escuro);
+      color: rgba(255,255,255,0.65);
+      padding-block: 48px;
+      text-align: center;
+      font-size: 0.88rem;
+    }
+    .footer-logo {
+      height: 36px;
+      margin-inline: auto;
+      margin-bottom: 20px;
+      opacity: 0.85;
+      filter: brightness(0) invert(1);
+    }
+    .footer-handle {
+      font-family: var(--fonte-titulo);
+      font-weight: 700;
+      color: #fff;
+      font-size: 1rem;
+      margin-bottom: 6px;
+    }
+    .footer-canal {
+      margin-bottom: 24px;
+    }
+    .footer-canal a {
+      color: #FFD4B8;
+      font-weight: 600;
+      transition: color var(--transicao);
+    }
+    .footer-canal a:hover { color: var(--laranja); }
+    .footer-apoiadores-titulo {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: rgba(255,255,255,0.4);
+      margin-bottom: 10px;
+    }
+    .footer-apoiadores {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-bottom: 32px;
+    }
+    .footer-apoiadores span {
+      color: rgba(255,255,255,0.6);
+      font-weight: 600;
+    }
+    .footer-copy {
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding-top: 24px;
+      color: rgba(255,255,255,0.35);
+      font-size: 0.78rem;
+    }
+
+    /* ===================== RESPONSIVO ===================== */
+    @media (max-width: 768px) {
+      .container {
+        padding-inline: 24px;
+      }
+      .hero {
+        padding-block: 56px 48px;
+      }
+      .player-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+      .secao-player {
+        padding-block: 48px;
+      }
+      .secao-cta {
+        padding-block: 48px;
+      }
+      .cta-card {
+        padding: 40px 28px;
+      }
+      .header-nome {
+        font-size: 0.95rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .btn-cta {
+        font-size: 0.95rem;
+        padding: 16px 28px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <img
+        src="../assets/images/logo-qcg.webp"
+        alt="Logo QCG — Quinzena da Conscientização GlutenFree"
+        class="header-logo"
+        loading="eager"
+      />
+      <div class="header-nome">
+        Quinzena da Conscientização GlutenFree
+        <span>2ª Edição 2026 — QCG</span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ===================== HERO ===================== -->
+    <section class="hero">
+      <div class="container">
+        <p class="badge-evento">Evento Online &bull; Gratuito &bull; 15 dias</p>
+        <h1 class="hero-titulo">
+          Quinzena da<br>
+          <em>Conscientização GlutenFree</em>
+        </h1>
+        <p class="hero-subtitulo">
+          15 dias de conteúdo gratuito com a <strong style="color:#fff;">Drª Luciene Marques</strong> — Chef GlutenFree
+        </p>
+      </div>
+    </section>
+
+    <!-- ===================== PLAYER + PLAYLIST ===================== -->
+    <section class="secao-player">
+      <div class="container">
+        <div class="player-grid">
+
+          <!-- Player YouTube com playlist completa -->
+          <div class="player-wrapper">
+            <iframe
+              src="https://www.youtube.com/embed/videoseries?si=1jiHnAXFJq5kXKFF&list=PLb-6P8VZf2dY4WYX02leX758RswZ87ZAp"
+              title="Playlist da Quinzena da Conscientização GlutenFree 2026"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+              loading="lazy"
+            ></iframe>
+          </div>
+
+          <!-- Texto explicativo -->
+          <div class="player-info">
+            <h2>O que você vai aprender neste evento</h2>
+            <p>
+              Durante 15 dias, a Drª Luciene Marques compartilha conteúdos que médicos raramente explicam — de forma clara, prática e completamente gratuita.
+            </p>
+
+            <ul class="temas-lista" aria-label="Temas abordados no evento">
+              <li class="tema-item">
+                <span class="tema-icone" aria-hidden="true">🌿</span>
+                <span><strong>Barriga inchada</strong> — por que acontece e como aliviar</span>
+              </li>
+              <li class="tema-item">
+                <span class="tema-icone" aria-hidden="true">🧠</span>
+                <span><strong>Eixo intestino-cérebro</strong> — a conexão que muda tudo</span>
+              </li>
+              <li class="tema-item">
+                <span class="tema-icone" aria-hidden="true">🏷️</span>
+                <span><strong>Leitura de rótulos</strong> — como identificar o glúten escondido</span>
+              </li>
+              <li class="tema-item">
+                <span class="tema-icone" aria-hidden="true">⚗️</span>
+                <span><strong>Aditivos alimentares</strong> — os que você deve evitar</span>
+              </li>
+              <li class="tema-item">
+                <span class="tema-icone" aria-hidden="true">🥘</span>
+                <span><strong>Alternativas práticas</strong> no dia a dia sem glúten</span>
+              </li>
+              <li class="tema-item">
+                <span class="tema-icone" aria-hidden="true">🍞</span>
+                <span><strong>Panificação sem glúten</strong> — técnicas e segredos da Chef</span>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CTA ===================== -->
+    <section class="secao-cta">
+      <div class="container">
+        <div class="cta-card">
+          <span class="cta-tag">Acesso completo</span>
+          <h2 class="cta-titulo">Quer acesso a todo o material do evento?</h2>
+          <p class="cta-desc">
+            Tenha acesso permanente a todos os vídeos, manual completo, tabela de aditivos e guias práticos da QCG 2026 — por apenas <strong>R$&nbsp;97</strong>.
+          </p>
+          <a
+            href="https://pay.hotmart.com/V105281345I?off=9qjb6zkf"
+            class="btn-cta"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Garantir acesso completo ao evento por R$ 97"
+          >
+            Garantir acesso completo por R$&nbsp;97
+          </a>
+          <p class="cta-garantia">Acesso imediato por 12 meses &bull; Pagamento 100% seguro</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <img
+        src="../assets/images/logo-qcg.webp"
+        alt="Logo Chef GlutenFree"
+        class="footer-logo"
+        loading="lazy"
+      />
+      <p class="footer-handle">@chef.glutenfree</p>
+      <p class="footer-canal">
+        <a
+          href="https://www.youtube.com/playlist?list=PLb-6P8VZf2dY4WYX02leX758RswZ87ZAp"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Canal Chef GlutenFree no YouTube"
+        >
+          Canal Chef GlutenFree no YouTube
+        </a>
+      </p>
+
+      <p class="footer-apoiadores-titulo">Apoiadores</p>
+      <div class="footer-apoiadores">
+        <span>@maissaude</span>
+        <span>@nerdrico</span>
+        <span>@felipesunset</span>
+      </div>
+
+      <p class="footer-copy">
+        &copy; 2026 Chef GlutenFree — Drª Luciene Marques. Todos os direitos reservados.
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>
