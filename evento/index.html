@@ -13,6 +13,22 @@
   <meta property="og:description" content="15 dias de conteúdo gratuito com a Drª Luciene Marques. Evento Online e Gratuito." />
   <meta property="og:locale" content="pt_BR" />
 
+  <!-- Meta Pixel -->
+  <script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+    document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '3224093251220237');
+    fbq('track', 'PageView');
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=3224093251220237&ev=PageView&noscript=1" />
+  </noscript>
+  <!-- /Meta Pixel -->
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
@@ -424,7 +440,8 @@
           <div class="player-col">
             <div class="player-wrapper">
               <iframe
-                src="https://www.youtube.com/embed/videoseries?si=1jiHnAXFJq5kXKFF&list=PLb-6P8VZf2dY4WYX02leX758RswZ87ZAp"
+                id="yt-player"
+                src="https://www.youtube.com/embed/videoseries?si=1jiHnAXFJq5kXKFF&list=PLb-6P8VZf2dY4WYX02leX758RswZ87ZAp&enablejsapi=1"
                 title="Playlist da Quinzena da Conscientização GlutenFree 2026"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -545,5 +562,6 @@
     </div>
   </footer>
 
+  <script src="js/main.js"></script>
 </body>
 </html>
